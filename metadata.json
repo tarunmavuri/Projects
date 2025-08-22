@@ -1,0 +1,5 @@
+{
+  "name": "WayVenture",
+  "description": "An AI-powered trip planner that generates a comprehensive travel guide for any destination, including popular places, restaurants, cafes, essential services, local language, and estimated budget.",
+  "requestFramePermissions": []
+}

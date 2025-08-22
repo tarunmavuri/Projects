@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WayVenture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.14.0"
+  }
+}
+</script>
+<style>
+  :root {
+    --accent-color: #2dd4bf; /* Default teal color */
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes modalPop {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  @keyframes backgroundFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes glow {
+    0%, 100% { filter: drop-shadow(0 0 4px var(--accent-color)); }
+    50% { filter: drop-shadow(0 0 12px var(--accent-color)); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .default-bg {
+    background-color: #0f172a; /* bg-slate-900 */
+    background-image: radial-gradient(ellipse at 50% 20%, #334155 0%, transparent 70%);
+  }
+  .animate-magic-icon {
+    animation: float 4s ease-in-out infinite, glow 3s ease-in-out infinite;
+  }
+  .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+  .animate-modal-pop { animation: modalPop 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+  .animate-background-fade-in { animation: backgroundFadeIn 1.5s ease-in-out forwards; }
+</style>
+</head>
+  <body class="bg-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
